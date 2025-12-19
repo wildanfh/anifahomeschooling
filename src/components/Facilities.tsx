@@ -12,8 +12,14 @@ const Facilities: React.FC = () => {
                   <span className="material-symbols-outlined text-primary-dark">settings_accessibility</span>
                   Sistem Pembelajaran
                 </h3>
-                <p className="text-gray-600 mb-4">
-                  Kami menerapkan sistem <strong>Blended Learning</strong> yang fleksibel. Anak belajar di rumah dengan panduan modul terstruktur, dikombinasikan dengan sesi tatap muka (home visit atau kelas kecil) untuk sosialisasi dan evaluasi.
+                <p className="text-gray-600 mb-3">
+                  Sistem pembelajaran di Anifa Homeschooling dilaksanakan secara <strong>online, Senin sampai Sabtu</strong>.
+                </p>
+                <p className="text-gray-600 mb-3">
+                  Fleksibilitas ini memberikan ruang bagi keluarga untuk menyesuaikan waktu belajar dengan kondisi anak, ritme keluarga, serta kebutuhan khusus yang dimiliki peserta didik.
+                </p>
+                <p className="text-gray-600">
+                  Meskipun fleksibel, pembelajaran tetap <strong>terarah</strong>, didampingi oleh guru yang kompeten dan berpengalaman di bidangnya.
                 </p>
               </div>
 
@@ -22,8 +28,14 @@ const Facilities: React.FC = () => {
                   <span className="material-symbols-outlined text-primary-dark">diversity_1</span>
                   Peran Orang Tua
                 </h3>
-                <p className="text-gray-600 mb-4">
-                  Di Anifa Homeschooling, orang tua adalah partner utama. Kami menyediakan sesi <strong>Parenting Class</strong> rutin agar Ayah dan Bunda memiliki bekal ilmu yang cukup untuk mendampingi Ananda di rumah. Sinergi ini kunci keberhasilan.
+                <p className="text-gray-600 mb-3">
+                  Keunggulan utama sistem kami adalah <strong>keterlibatan aktif orang tua</strong>. Orang tua tidak hanya menjadi pendamping, tetapi juga dapat memantau langsung proses belajar anak, materi yang diajarkan, serta kinerja guru.
+                </p>
+                <p className="text-gray-600 mb-3">
+                  Anifa Homeschooling memberikan ruang yang luas bagi orang tua untuk mengembangkan potensi anak secara penuh di rumah.
+                </p>
+                <p className="text-gray-600">
+                  Dengan bimbingan dari guru, orang tua dapat menyesuaikan metode belajar sesuai gaya belajar anak, baik visual, auditori, maupun kinestetik.
                 </p>
               </div>
             </div>
@@ -35,8 +47,14 @@ const Facilities: React.FC = () => {
                     <span className="material-symbols-outlined text-primary-dark">verified_user</span>
                     Legalitas & Pendidikan Lanjut
                   </h3>
-                  <p className="text-gray-600 mb-4">
-                    Khawatir soal ijazah? Anifa Homeschooling bernaung di bawah payung hukum PKBM resmi. Siswa akan mendapatkan NISN dan Ijazah Paket A/B/C yang setara dengan sekolah formal, sehingga aman untuk melanjutkan ke jenjang berikutnya (SMP/SMA/Kuliah).
+                  <p className="text-gray-600 mb-3">
+                    Untuk menjamin masa depan akademik peserta didik, Anifa Homeschooling mendaftarkan siswa ke <strong>PKBM</strong>, sehingga peserta didik mendapatkan <strong>ijazah Kejar Paket A, B, atau C</strong> sesuai jenjangnya.
+                  </p>
+                  <p className="text-gray-600 mb-3">
+                    Ijazah ini diakui secara resmi dan dapat digunakan untuk melanjutkan pendidikan ke jenjang yang lebih tinggi, baik di sekolah formal, perguruan tinggi, maupun ke luar negeri.
+                  </p>
+                  <p className="text-gray-600 font-semibold text-primary-dark">
+                    ✨ Menyediakan bimbingan untuk siswa yang ingin melanjutkan ke Mesir atau Jerman.
                   </p>
                 </div>
 
@@ -45,8 +63,11 @@ const Facilities: React.FC = () => {
                     <span className="material-symbols-outlined text-primary-dark">nest_cam_iq_outdoor</span>
                     Lingkungan Belajar Aman
                   </h3>
+                  <p className="text-gray-600 mb-3">
+                    Belajar dari rumah memberikan rasa <strong>aman dan nyaman</strong> bagi anak. Sistem ini secara efektif meminimalkan risiko <em>bullying</em> dan tekanan sosial yang sering terjadi di lingkungan sekolah konvensional.
+                  </p>
                   <p className="text-gray-600">
-                    Kami berkomitmen menciptakan <em>Safe Zone</em> bagi anak. Bebas bullying, pergaulan yang terjaga, serta penanaman adab dalam berinteraksi. Belajar menjadi proses yang menenangkan hati dan pikiran.
+                    Anak dapat belajar dengan suasana yang lebih tenang, fokus, dan sesuai dengan nilai-nilai keluarga.
                   </p>
                 </div>
               </div>

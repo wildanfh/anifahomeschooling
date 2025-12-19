@@ -24,10 +24,13 @@ const Profile: React.FC = () => {
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Anifa Homeschooling adalah lembaga pendidikan non-formal yang didedikasikan untuk anak usia dini dan sekolah dasar dengan pendekatan <span className="font-bold text-primary-dark">Personalized Learning</span> berbasis nilai-nilai Islam. Kami percaya bahwa setiap anak adalah bintang dengan cahayanya sendiri.
+                Anifa Homeschooling adalah lembaga pendidikan berbasis <span className="font-bold text-primary-dark">aqidah Islam</span> yang hadir sebagai solusi pendidikan modern dengan landasan aqidah Islam yang kuat.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Kami hadir sebagai mitra orang tua dalam mendidik buah hati, memastikan pondasi aqidah tertanam kuat, sekaligus mengembangkan keterampilan abad 21 melalui metode yang menyenangkan dan fleksibel.
+                Kami berkomitmen mendampingi anak dan keluarga dalam menghadirkan proses belajar yang bermakna, aman, fleksibel, dan terarah, sesuai dengan fitrah serta potensi unik setiap peserta didik.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Di tengah tantangan dunia pendidikan saat ini—tekanan akademik, lingkungan kurang kondusif, hingga maraknya bullying—kami hadir dengan sistem belajar dari rumah yang aman dan nyaman, memungkinkan anak tumbuh dengan rasa percaya diri dan fokus pada pengembangan potensinya.
               </p>
             </div>
           </div>
@@ -39,29 +42,33 @@ const Profile: React.FC = () => {
               </div>
               <h4 className="text-xl font-bold text-text-dark mb-3">Visi Kami</h4>
               <p className="text-[#5d4d44]">
-                Mewujudkan generasi Rabbani yang beraqidah lurus, berakhlak mulia, cerdas, dan mandiri dalam menghadapi tantangan zaman.
+                Mewujudkan generasi pemimpin yang punya kemampuan bahasa berpengaruh dan kemampuan sains yang kuat.
               </p>
             </div>
 
-            <div className="bg-accent-pink p-8 rounded-2xl border border-primary/20 hover:shadow-lg transition-shadow">
+            <div className="bg-accent-pink p-8 rounded-2xl border border-primary/20 hover:shadow-lg transition-shadow md:col-span-2">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mb-6 shadow-sm">
                 <span className="material-symbols-outlined text-2xl">flag</span>
               </div>
               <h4 className="text-xl font-bold text-text-dark mb-3">Misi Kami</h4>
               <ul className="text-[#5d4d44] space-y-2 list-disc list-inside">
-                <li>Menanamkan nilai tauhid sejak dini.</li>
-                <li>Menyelenggarakan pendidikan sesuai fitrah anak.</li>
-                <li>Membekali orang tua dengan ilmu parenting islami.</li>
+                <li>Menyelenggarakan pendidikan homeschooling berbasis aqidah Islam yang menyeluruh</li>
+                <li>Menghadirkan sistem pembelajaran online yang fleksibel, terarah, dan berkualitas</li>
+                <li>Menguatkan peran orang tua sebagai pendidik utama dalam tumbuh kembang anak</li>
+                <li>Menjadikan pembelajaran bahasa sebagai pembentuk kekuatan berpikir</li>
+                <li>Menjadikan pelajaran sains dan teknologi untuk menguatkan kemampuan berkarya mengeksplorasi alam</li>
+                <li>Menguatkan kemampuan berpengaruh untuk menjadi pemimpin umat</li>
+                <li>Menyiapkan peserta didik agar mampu melanjutkan pendidikan ke jenjang lebih tinggi (dalam/luar negeri: Mesir, Jerman)</li>
               </ul>
             </div>
 
-            <div className="bg-[#eafdf6] p-8 rounded-2xl border border-secondary/30 hover:shadow-lg transition-shadow">
+            <div className="bg-[#eafdf6] p-8 rounded-2xl border border-secondary/30 hover:shadow-lg transition-shadow md:col-span-3">
               <div className="w-12 h-12 bg-[#5fb996] rounded-full flex items-center justify-center text-white mb-6 shadow-sm">
                 <span className="material-symbols-outlined text-2xl">psychology</span>
               </div>
               <h4 className="text-xl font-bold text-text-dark mb-3">Filosofi Pendidikan</h4>
               <p className="text-[#5d4d44]">
-                "Pendidikan adalah proses menumbuhkan, bukan membentuk." Kami menghargai keunikan setiap anak dan memfasilitasi mereka tumbuh sesuai fitrahnya.
+                Anifa Homeschooling meyakini bahwa pendidikan bukan sekadar transfer ilmu, tetapi proses pembentukan manusia seutuhnya. Kami mengembangkan <strong>pembelajaran terintegrasi</strong>, di mana satu mata pelajaran saling terhubung dengan mata pelajaran lainnya. Anak tidak belajar secara terpisah-pisah, melainkan memahami keterkaitan ilmu dalam kehidupan nyata, sehingga pembelajaran menjadi lebih bermakna.
               </p>
             </div>
           </div>

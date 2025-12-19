@@ -3,7 +3,7 @@ import React from 'react'
 interface ProgramCardProps {
   icon: string
   title: string
-  description: string
+  description: string | string[]
   bgColor: string
   iconBgColor: string
   iconColor: string
@@ -19,7 +19,18 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ icon, title, description, bgC
         </div>
         <h4 className="text-xl font-bold text-text-dark">{title}</h4>
       </div>
-      <p className="text-gray-600 text-sm">{description}</p>
+      {Array.isArray(description) ? (
+        <ul className="text-gray-600 text-sm space-y-2">
+          {description.map((item, idx) => (
+            <li key={idx} className="flex gap-2">
+              <span className="text-primary-dark">•</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-gray-600 text-sm">{description}</p>
+      )}
     </div>
   )
 }
@@ -29,7 +40,12 @@ const Curriculum: React.FC = () => {
     {
       icon: 'auto_stories',
       title: 'Tahfidz Al-Qur\'an',
-      description: 'Program hafalan Al-Qur\'an dengan metode talaqqi yang menyenangkan dan sesuai usia anak.',
+      description: [
+        'Menanamkan kecintaan anak terhadap Al-Qur\'an sejak dini',
+        'Mengasah kecerdasan dan konsentrasi anak',
+        'Target hafalan disesuaikan dengan jenjang dan kemampuan',
+        'Metode yang menyenangkan dan tidak membebani'
+      ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-accent-pink',
       iconColor: 'text-primary-dark',
@@ -37,8 +53,13 @@ const Curriculum: React.FC = () => {
     },
     {
       icon: 'science',
-      title: 'STEAM',
-      description: 'Pembelajaran Science, Technology, Engineering, Art, & Math untuk melatih logika dan kreativitas.',
+      title: 'STEAM (Sains, Matematika, Geografi)',
+      description: [
+        'Melatih kemampuan berpikir kritis, kreatif, kolaboratif, dan problem solving',
+        'Memahami konsep sains dan teknologi melalui pendekatan proyek',
+        'Praktik sederhana yang aplikatif',
+        'Eksplorasi alam untuk menghasilkan karya'
+      ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-[#eafdf6]',
       iconColor: 'text-green-700',
@@ -47,7 +68,12 @@ const Curriculum: React.FC = () => {
     {
       icon: 'mosque',
       title: 'Tsaqofah Islam',
-      description: 'Pengenalan Sirah Nabawiyah, Fiqih Ibadah praktis, dan Adab harian muslim.',
+      description: [
+        'Memperkuat pemahaman tentang Islam',
+        'Meliputi aqidah, akhlak, ibadah, muamalah',
+        'Sejarah Islam yang menginspirasi',
+        'Nilai-nilai Islam tertanam kuat dalam kehidupan sehari-hari'
+      ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-yellow-50',
       iconColor: 'text-yellow-600',
@@ -56,7 +82,12 @@ const Curriculum: React.FC = () => {
     {
       icon: 'translate',
       title: 'Bahasa Arab',
-      description: 'Pengenalan kosakata dasar Al-Qur\'an dan percakapan sederhana sehari-hari.',
+      description: [
+        'Mendukung pemahaman Al-Qur\'an dan literatur Islam',
+        'Pengenalan kosa kata dan percakapan dasar',
+        'Struktur bahasa secara bertahap',
+        'Aplikasi dalam kehidupan sehari-hari'
+      ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-blue-50',
       iconColor: 'text-blue-600',
@@ -65,7 +96,12 @@ const Curriculum: React.FC = () => {
     {
       icon: 'language',
       title: 'Bahasa Inggris',
-      description: 'Active English untuk komunikasi global dengan metode fun learning.',
+      description: [
+        'Bahasa internasional untuk menghadapi dunia global',
+        'Disesuaikan dengan usia dan level',
+        'Menekankan pada komunikasi aktif',
+        'Pemahaman konteks dalam penggunaan bahasa'
+      ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-red-50',
       iconColor: 'text-red-600',
@@ -74,7 +110,12 @@ const Curriculum: React.FC = () => {
     {
       icon: 'menu_book',
       title: 'Bahasa Indonesia',
-      description: 'Literasi baca tulis dan kecintaan terhadap sastra serta budaya nusantara.',
+      description: [
+        'Fokus pada kemampuan berkomunikasi secara percaya diri',
+        'Menguatkan kemampuan berpikir',
+        'Mempunyai bahasa berpengaruh',
+        'Siap menjadi generasi pemimpin'
+      ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-purple-50',
       iconColor: 'text-purple-600',
@@ -94,7 +135,7 @@ const Curriculum: React.FC = () => {
               Kurikulum & Program Unggulan
             </h3>
             <p className="text-gray-600">
-              Perpaduan kurikulum nasional dan kurikulum khas Anifa yang mengedepankan Al-Qur'an dan Keterampilan Hidup.
+              Kurikulum terintegrasi dengan memasukkan unsur aqidah Islam ke seluruh materi pembelajaran.
             </p>
           </div>
 
