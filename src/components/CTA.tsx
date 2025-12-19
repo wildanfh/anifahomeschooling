@@ -15,7 +15,7 @@ const CTA: React.FC = () => {
             <p className="mb-4 text-[#2c3e18] font-bold">Konsultasi & Pendaftaran:</p>
             <a
               className="flex items-center justify-center gap-3 rounded-full h-14 px-8 bg-white text-[#3e5226] text-xl font-bold shadow-xl hover:bg-[#f0f9e8] hover:scale-105 transition-all w-full"
-              href="https://wa.me/6285640374042"
+              href="https://wa.me/6285640374042?text=Assalamualaikum%20bunda%20Zulfa%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20program%20Anifa%20Homeschooling"
               target="_blank"
               rel="noopener noreferrer"
             >

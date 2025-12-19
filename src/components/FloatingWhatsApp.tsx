@@ -4,7 +4,7 @@ const FloatingWhatsApp: React.FC = () => {
   return (
     <a
       className="fixed bottom-6 right-6 z-50 md:hidden bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform animate-bounce"
-      href="https://wa.me/6285640374042"
+      href="https://wa.me/6285640374042?text=Assalamualaikum%20bunda%20Zulfa%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20program%20Anifa%20Homeschooling"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat via WhatsApp"

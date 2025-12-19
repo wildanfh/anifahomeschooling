@@ -31,7 +31,7 @@ const Header: React.FC = () => {
             </nav>
             <a
               className="flex items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-secondary text-[#3e5226] text-sm font-bold shadow-md hover:bg-[#a5c96d] transition-colors"
-              href="https://wa.me/6285640374042"
+              href="https://wa.me/6285640374042?text=Assalamualaikum%20bunda%20Zulfa%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20program%20Anifa%20Homeschooling"
               target="_blank"
               rel="noopener noreferrer"
             >

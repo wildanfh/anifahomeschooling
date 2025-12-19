@@ -69,10 +69,7 @@ const Curriculum: React.FC = () => {
       icon: 'mosque',
       title: 'Tsaqofah Islam',
       description: [
-        'Memperkuat pemahaman tentang Islam.',
-        'Meliputi aqidah, akhlak, ibadah, muamalah.',
-        'Sejarah Islam yang menginspirasi.',
-        'Nilai-nilai Islam tertanam kuat dalam kehidupan sehari-hari.'
+        'Program ini memperkuat pemahaman anak tentang Islam, meliputi akidah, akhlak, ibadah, muamalah dan sejarah Islam, sehingga nilai-nilai Islam tertanam kuat dalam kehidupan sehari-hari.',
       ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-yellow-50',
