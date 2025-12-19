@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
                 Pendidikan Berbasis Akidah Islam
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-[#4a403a]">
-                Mewujudkan Generasi <span className="text-primary-dark">Pemimpin</span> yang memiliki Bahasa Berpengaruh & Sains Kuat
+                Mewujudkan Generasi <span className="text-primary-dark">Pemimpin</span> dengan Bahasa yang Berpengaruh & Sains yang Kuat
               </h1>
               <p className="text-lg text-[#6b584e] font-bold leading-relaxed max-w-2xl mx-auto md:mx-0">
                 <span className="text-primary-dark">Penerimaan Murid Baru:</span> PAUD • TK • SD • SMP • SMA
