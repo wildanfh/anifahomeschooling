@@ -30,7 +30,7 @@ const Profile: React.FC = () => {
                 Kami berkomitmen mendampingi anak dan keluarga dalam menghadirkan proses belajar yang bermakna, aman, fleksibel, dan terarah, sesuai dengan fitrah serta potensi unik setiap peserta didik.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Di tengah tantangan dunia pendidikan saat ini—tekanan akademik, lingkungan kurang kondusif, hingga maraknya bullying—kami hadir dengan sistem belajar dari rumah yang aman dan nyaman, memungkinkan anak tumbuh dengan rasa percaya diri dan fokus pada pengembangan potensinya.
+                Di tengah tantangan dunia pendidikan saat ini, tekanan akademik, lingkungan kurang kondusif, hingga maraknya bullying, kami hadir dengan sistem belajar dari rumah yang aman dan nyaman, memungkinkan anak tumbuh dengan rasa percaya diri dan fokus pada pengembangan potensinya.
               </p>
             </div>
           </div>
