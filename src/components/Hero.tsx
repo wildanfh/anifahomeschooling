@@ -8,16 +8,16 @@ const Hero: React.FC = () => {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="flex flex-col gap-6 flex-1 text-center md:text-left z-10">
               <span className="inline-block px-4 py-1.5 rounded-full bg-white border border-primary/30 text-primary-dark font-bold text-xs uppercase tracking-wider w-fit mx-auto md:mx-0 shadow-sm">
-                Pendidikan Berbasis Aqidah Islam
+                Pendidikan Berbasis Akidah Islam
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-[#4a403a]">
-                Mewujudkan Generasi <span className="text-primary-dark">Pemimpin</span> dengan Bahasa Berpengaruh & Sains Kuat
+                Mewujudkan Generasi <span className="text-primary-dark">Pemimpin</span> dengan Bahasa yang Berpengaruh & Sains yang Kuat
               </h1>
               <p className="text-lg text-[#6b584e] font-bold leading-relaxed max-w-2xl mx-auto md:mx-0">
                 <span className="text-primary-dark">Penerimaan Murid Baru:</span> PAUD • TK • SD • SMP • SMA
               </p>
               <p className="text-base text-[#6b584e] leading-relaxed max-w-2xl mx-auto md:mx-0">
-                Anifa Homeschooling hadir sebagai solusi pendidikan modern dengan sistem belajar dari rumah yang aman, nyaman, dan bermakna. Dengan kurikulum terintegrasi berbasis aq idah Islam, kami mendampingi anak tumbuh sesuai fitrah dan potensi uniknya, bebas dari tekanan akademik dan risiko bullying.
+                Anifa Homeschooling hadir sebagai solusi pendidikan modern dengan sistem belajar dari rumah yang aman, nyaman, dan bermakna. Dengan kurikulum terintegrasi berbasis akidah Islam, kami mendampingi anak tumbuh sesuai fitrah dan potensi uniknya, bebas dari tekanan akademik dan risiko <span className="italic">bullying</span>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-2">
                 <a
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
               <img
                 alt="Ibu muslimah mendampingi anak belajar mengaji di rumah"
                 className="rounded-[2rem] shadow-xl w-full h-auto object-cover aspect-[4/3] relative z-10 border-4 border-white"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC92cKVsvCM6LrqJIn0jQYpt3dvbLme2SGKmWlgmMxVT74BzHlNNwtpXyjj27fgIroehKA0qai49x5Cs5aSib8yPKddHvemAMcsnSJOHZ5r1HOem1PqUokqaQzMdUvP6b8RXpjpPxjcBLMAAPBDPeNta7B61PWrlv5UuLv8eYDJn2jrjvPZyzgruBxwJRvo0b8vQlq3GZwCs5AaJsMFZtv7o7Pw36OJSUx671Vay0zIzQZp3Ur2ywLA6F0b5pa2GuB6YgMgTil0053m"
+                src="assets/hero.jpeg"
               />
             </div>
           </div>

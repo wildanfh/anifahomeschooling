@@ -11,7 +11,7 @@ const Profile: React.FC = () => {
               <img
                 alt="Anak anak belajar bersama dengan ceria dalam suasana islami"
                 className="rounded-xl shadow-lg w-full object-cover aspect-[4/3] border-2 border-primary/20"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKna2uQA3gDfea4D3fVG_RYmIUpRmrytYSEU750J8J138vbNe7wk812GAAelb0rZp5-Iqmgp8oaqic0A-arVOl_TLhapvQM-6EkT2G-7mAeAbra5Ko6mR64uIarsgKP8uAPI-YAp-UmJiugm9T6hRTl8k8vyFuaQ8rqK5Kj8o2MCm50Se09TVd-sNZBJMGH4o3Ol26F0rdZb-JYxnID_7fcmiZbU7TNjdCF0hKWeQf8nYID0tJW_KpnaCvkTslwQZ80cGQu5DXhFbA"
+                src="assets/profile.jpeg"
               />
             </div>
             <div className="flex-1 order-1 md:order-2 flex flex-col gap-6">
@@ -24,13 +24,13 @@ const Profile: React.FC = () => {
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Anifa Homeschooling adalah lembaga pendidikan berbasis <span className="font-bold text-primary-dark">aqidah Islam</span> yang hadir sebagai solusi pendidikan modern dengan landasan aqidah Islam yang kuat.
+                Anifa Homeschooling adalah lembaga pendidikan berbasis <span className="font-bold text-primary-dark">akidah Islam</span> yang hadir sebagai solusi pendidikan modern dengan landasan akidah Islam yang kuat.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Kami berkomitmen mendampingi anak dan keluarga dalam menghadirkan proses belajar yang bermakna, aman, fleksibel, dan terarah, sesuai dengan fitrah serta potensi unik setiap peserta didik.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Di tengah tantangan dunia pendidikan saat ini, tekanan akademik, lingkungan kurang kondusif, hingga maraknya bullying, kami hadir dengan sistem belajar dari rumah yang aman dan nyaman, memungkinkan anak tumbuh dengan rasa percaya diri dan fokus pada pengembangan potensinya.
+                Di tengah tantangan dunia pendidikan saat ini, tekanan akademik, lingkungan kurang kondusif, hingga maraknya <span className="italic">bullying</span>, kami hadir dengan sistem belajar dari rumah yang aman dan nyaman, memungkinkan anak tumbuh dengan rasa percaya diri dan fokus pada pengembangan potensinya.
               </p>
             </div>
           </div>
@@ -42,7 +42,7 @@ const Profile: React.FC = () => {
               </div>
               <h4 className="text-xl font-bold text-text-dark mb-3">Visi Kami</h4>
               <p className="text-[#5d4d44]">
-                Mewujudkan generasi pemimpin yang punya kemampuan bahasa berpengaruh dan kemampuan sains yang kuat.
+                Mewujudkan generasi pemimpin yang memiliki kemampuan bahasa berpengaruh dan kemampuan sains kuat.
               </p>
             </div>
 
@@ -52,13 +52,13 @@ const Profile: React.FC = () => {
               </div>
               <h4 className="text-xl font-bold text-text-dark mb-3">Misi Kami</h4>
               <ul className="text-[#5d4d44] space-y-2 list-disc list-inside">
-                <li>Menyelenggarakan pendidikan homeschooling berbasis aqidah Islam yang menyeluruh</li>
-                <li>Menghadirkan sistem pembelajaran online yang fleksibel, terarah, dan berkualitas</li>
-                <li>Menguatkan peran orang tua sebagai pendidik utama dalam tumbuh kembang anak</li>
-                <li>Menjadikan pembelajaran bahasa sebagai pembentuk kekuatan berpikir</li>
-                <li>Menjadikan pelajaran sains dan teknologi untuk menguatkan kemampuan berkarya mengeksplorasi alam</li>
-                <li>Menguatkan kemampuan berpengaruh untuk menjadi pemimpin umat</li>
-                <li>Menyiapkan peserta didik agar mampu melanjutkan pendidikan ke jenjang lebih tinggi (dalam/luar negeri: Mesir, Jerman)</li>
+                <li>Menyelenggarakan pendidikan <span className="font-italic">homeschooling</span> berbasis akidah Islam yang menyeluruh.</li>
+                <li>Menghadirkan sistem pembelajaran online yang fleksibel, terarah, dan berkualitas.</li>
+                <li>Menguatkan peran orang tua sebagai pendidik utama dalam tumbuh kembang anak.</li>
+                <li>Menjadikan pembelajaran bahasa sebagai pembentuk kekuatan berpikir.</li>
+                <li>Menjadikan pelajaran sains dan teknologi untuk menguatkan kemampuan berkarya mengeksplorasi alam.</li>
+                <li>Menguatkan kemampuan berpengaruh untuk menjadi pemimpin umat.</li>
+                <li>Menyiapkan peserta didik agar mampu melanjutkan pendidikan ke jenjang lebih tinggi (dalam/luar negeri: Mesir, Jerman).</li>
               </ul>
             </div>
 
@@ -68,7 +68,7 @@ const Profile: React.FC = () => {
               </div>
               <h4 className="text-xl font-bold text-text-dark mb-3">Filosofi Pendidikan</h4>
               <p className="text-[#5d4d44]">
-                Anifa Homeschooling meyakini bahwa pendidikan bukan sekadar transfer ilmu, tetapi proses pembentukan manusia seutuhnya. Kami mengembangkan <strong>pembelajaran terintegrasi</strong>, di mana satu mata pelajaran saling terhubung dengan mata pelajaran lainnya. Anak tidak belajar secara terpisah-pisah, melainkan memahami keterkaitan ilmu dalam kehidupan nyata, sehingga pembelajaran menjadi lebih bermakna.
+                Anifa <span className="italic">Homeschooling</span> meyakini bahwa pendidikan bukan sekadar transfer ilmu, tetapi proses pembentukan manusia seutuhnya. Kami mengembangkan <strong>pembelajaran terintegrasi</strong>, di mana satu mata pelajaran saling terhubung dengan mata pelajaran lainnya. Anak tidak belajar secara terpisah-pisah, melainkan memahami keterkaitan ilmu dalam kehidupan nyata, sehingga pembelajaran menjadi lebih bermakna.
               </p>
             </div>
           </div>

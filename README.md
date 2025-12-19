@@ -49,4 +49,4 @@ src/
 
 ## License
 
-© 2024 Anifa Homeschooling. All rights reserved.
+© 2025 Anifa Homeschooling. All rights reserved.

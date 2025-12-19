@@ -41,10 +41,10 @@ const Curriculum: React.FC = () => {
       icon: 'auto_stories',
       title: 'Tahfidz Al-Qur\'an',
       description: [
-        'Menanamkan kecintaan anak terhadap Al-Qur\'an sejak dini',
-        'Mengasah kecerdasan dan konsentrasi anak',
-        'Target hafalan disesuaikan dengan jenjang dan kemampuan',
-        'Metode yang menyenangkan dan tidak membebani'
+        'Menanamkan kecintaan anak terhadap Al-Qur\'an sejak dini.',
+        'Mengasah kecerdasan dan konsentrasi anak.',
+        'Target hafalan disesuaikan dengan jenjang dan kemampuan.',
+        'Metode yang menyenangkan dan tidak membebani.'
       ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-accent-pink',
@@ -53,12 +53,12 @@ const Curriculum: React.FC = () => {
     },
     {
       icon: 'science',
-      title: 'STEAM (Sains, Matematika, Geografi)',
+      title: 'STEAM (Sains, Matematika, Geografi, Praktek Sains)',
       description: [
-        'Melatih kemampuan berpikir kritis, kreatif, kolaboratif, dan problem solving',
-        'Memahami konsep sains dan teknologi melalui pendekatan proyek',
-        'Praktik sederhana yang aplikatif',
-        'Eksplorasi alam untuk menghasilkan karya'
+        'Melatih kemampuan berpikir kritis, kreatif, kolaboratif, dan problem solving.',
+        'Memahami konsep sains dan teknologi melalui pendekatan proyek.',
+        'Praktik sederhana yang aplikatif.',
+        'Eksplorasi alam untuk menghasilkan karya.'
       ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-[#eafdf6]',
@@ -69,10 +69,10 @@ const Curriculum: React.FC = () => {
       icon: 'mosque',
       title: 'Tsaqofah Islam',
       description: [
-        'Memperkuat pemahaman tentang Islam',
-        'Meliputi aqidah, akhlak, ibadah, muamalah',
-        'Sejarah Islam yang menginspirasi',
-        'Nilai-nilai Islam tertanam kuat dalam kehidupan sehari-hari'
+        'Memperkuat pemahaman tentang Islam.',
+        'Meliputi aqidah, akhlak, ibadah, muamalah.',
+        'Sejarah Islam yang menginspirasi.',
+        'Nilai-nilai Islam tertanam kuat dalam kehidupan sehari-hari.'
       ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-yellow-50',
@@ -83,10 +83,10 @@ const Curriculum: React.FC = () => {
       icon: 'translate',
       title: 'Bahasa Arab',
       description: [
-        'Mendukung pemahaman Al-Qur\'an dan literatur Islam',
-        'Pengenalan kosa kata dan percakapan dasar',
-        'Struktur bahasa secara bertahap',
-        'Aplikasi dalam kehidupan sehari-hari'
+        'Mendukung pemahaman Al-Qur\'an dan literatur Islam.',
+        'Pengenalan kosa kata dan percakapan dasar.',
+        'Struktur bahasa secara bertahap.',
+        'Aplikasi dalam kehidupan sehari-hari.'
       ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-blue-50',
@@ -97,10 +97,10 @@ const Curriculum: React.FC = () => {
       icon: 'language',
       title: 'Bahasa Inggris',
       description: [
-        'Bahasa internasional untuk menghadapi dunia global',
-        'Disesuaikan dengan usia dan level',
-        'Menekankan pada komunikasi aktif',
-        'Pemahaman konteks dalam penggunaan bahasa'
+        'Bahasa internasional untuk menghadapi dunia global.',
+        'Disesuaikan dengan usia dan level.',
+        'Menekankan pada komunikasi aktif.',
+        'Pemahaman konteks dalam penggunaan bahasa.'
       ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-red-50',
@@ -111,10 +111,10 @@ const Curriculum: React.FC = () => {
       icon: 'menu_book',
       title: 'Bahasa Indonesia',
       description: [
-        'Fokus pada kemampuan berkomunikasi secara percaya diri',
-        'Menguatkan kemampuan berpikir',
-        'Mempunyai bahasa berpengaruh',
-        'Siap menjadi generasi pemimpin'
+        'Fokus pada kemampuan berkomunikasi secara percaya diri.',
+        'Menguatkan kemampuan berpikir.',
+        'Mempunyai bahasa berpengaruh.',
+        'Siap menjadi generasi pemimpin.'
       ],
       bgColor: 'bg-white',
       iconBgColor: 'bg-purple-50',
