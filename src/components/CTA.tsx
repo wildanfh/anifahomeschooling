@@ -20,7 +20,7 @@ const CTA: React.FC = () => {
               rel="noopener noreferrer"
             >
               <span className="material-symbols-outlined text-3xl text-green-600">chat</span>
-              <span>Chat WhatsApp Kami</span>
+              <span>Chat WhatsApp</span>
             </a>
             <p className="text-sm text-[#2c3e18]/70 mt-3 font-medium">0856-4037-4042 (Zulfa Alya)</p>
           </div>
