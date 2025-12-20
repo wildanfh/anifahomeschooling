@@ -5,6 +5,7 @@ import Profile from './components/Profile'
 import Curriculum from './components/Curriculum'
 import Facilities from './components/Facilities'
 import Testimonial from './components/Testimonial'
+import RegistrationRequirements from './components/RegistrationRequirements'
 import Gallery from './components/Gallery'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
@@ -49,6 +50,7 @@ function App() {
           <Profile />
           <Curriculum />
           <Facilities />
+          <RegistrationRequirements />
           <Testimonial />
           <Gallery />
           <CTA />
