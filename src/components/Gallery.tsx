@@ -13,6 +13,24 @@ const Gallery: React.FC = () => {
   // All gallery items from the assets folder (excluding logo.png)
   const galleryItems: GalleryItem[] = [
     {
+      src: '/assets/setoran-tahfidz.jpeg',
+      title: 'Setoran Tahfidz',
+      alt: 'Kegiatan setoran hafalan Al-Quran',
+      type: 'image'
+    },
+    {
+      src: '/assets/tk-a.jpeg',
+      title: 'Kegiatan TK A',
+      alt: 'Aktivitas pembelajaran TK A',
+      type: 'image'
+    },
+    {
+      src: '/assets/tk-b.jpeg',
+      title: 'Kegiatan TK B',
+      alt: 'Aktivitas pembelajaran TK B',
+      type: 'image'
+    },
+    {
       src: '/assets/menggambar-gerhana-matahari.jpeg',
       title: 'Menggambar Gerhana Matahari',
       alt: 'Kegiatan menggambar gerhana matahari',
@@ -73,27 +91,9 @@ const Gallery: React.FC = () => {
       type: 'image'
     },
     {
-      src: '/assets/setoran-tahfidz.jpeg',
-      title: 'Setoran Tahfidz',
-      alt: 'Kegiatan setoran hafalan Al-Quran',
-      type: 'image'
-    },
-    {
       src: '/assets/tk-a-praktek-buat-teh.jpeg',
       title: 'TK A - Praktek Buat Teh',
       alt: 'TK A praktek membuat teh',
-      type: 'image'
-    },
-    {
-      src: '/assets/tk-a.jpeg',
-      title: 'Kegiatan TK A',
-      alt: 'Aktivitas pembelajaran TK A',
-      type: 'image'
-    },
-    {
-      src: '/assets/tk-b.jpeg',
-      title: 'Kegiatan TK B',
-      alt: 'Aktivitas pembelajaran TK B',
       type: 'image'
     },
     {
