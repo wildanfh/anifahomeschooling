@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-2">
                 <a
                   className="flex items-center justify-center gap-2 rounded-full h-12 px-8 bg-primary text-white text-base font-bold shadow-lg hover:bg-primary-dark transition-all transform hover:-translate-y-1"
-                  href="https://wa.me/6285640374042"
+                  href="https://wa.me/6285640374042?text=Assalamualaikum%20bunda%20Zulfa%2C%20saya%20ingin%20informasi%20lebih%20lanjut%20mengenai%20program%20Anifa%20Homeschooling"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
