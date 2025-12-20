@@ -1,4 +1,9 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
 
 interface ProgramCardProps {
   icon: string
@@ -12,7 +17,7 @@ interface ProgramCardProps {
 
 const ProgramCard: React.FC<ProgramCardProps> = ({ icon, title, description, bgColor, iconBgColor, iconColor, borderColor }) => {
   return (
-    <div className={`${bgColor} p-6 rounded-xl border-b-4 ${borderColor} hover:-translate-y-1 transition-transform shadow-sm`}>
+    <div className={`${bgColor} p-6 rounded-xl border-b-4 ${borderColor} hover:-translate-y-1 transition-transform shadow-sm h-full`}>
       <div className="flex items-center gap-4 mb-4">
         <div className={`p-3 ${iconBgColor} rounded-lg ${iconColor}`}>
           <span className="material-symbols-outlined text-3xl">{icon}</span>
@@ -36,6 +41,10 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ icon, title, description, bgC
 }
 
 const Curriculum: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null)
+  const gridRef = useRef<HTMLDivElement>(null)
+
   const programs: ProgramCardProps[] = [
     {
       icon: 'auto_stories',
@@ -121,11 +130,43 @@ const Curriculum: React.FC = () => {
     }
   ]
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(headerRef.current, {
+        scrollTrigger: {
+          trigger: headerRef.current,
+          start: "top 85%",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      })
+
+      if (gridRef.current) {
+        gsap.from(gridRef.current.children, {
+          scrollTrigger: {
+            trigger: gridRef.current,
+            start: "top 80%",
+          },
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power2.out"
+        })
+      }
+    }, containerRef)
+
+    return () => ctx.revert()
+  }, [])
+
+
   return (
-    <div className="w-full py-20 bg-accent-cream" id="kurikulum">
+    <div ref={containerRef} className="w-full py-20 bg-accent-cream overflow-hidden" id="kurikulum">
       <div className="px-4 md:px-10 lg:px-40 flex justify-center">
         <div className="max-w-[1200px] w-full flex flex-col gap-12">
-          <div className="text-center max-w-3xl mx-auto">
+          <div ref={headerRef} className="text-center max-w-3xl mx-auto">
             <h2 className="text-primary-dark text-sm font-bold uppercase tracking-widest mb-2">
               Program Kami
             </h2>
@@ -137,7 +178,7 @@ const Curriculum: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {programs.map((program, index) => (
               <ProgramCard key={index} {...program} />
             ))}

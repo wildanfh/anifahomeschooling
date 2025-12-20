@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const RegistrationRequirements: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null)
+  const gridRef = useRef<HTMLDivElement>(null)
+  const footerRef = useRef<HTMLDivElement>(null)
+
   const requirements = [
     {
       icon: 'family_restroom',
@@ -24,11 +33,53 @@ const RegistrationRequirements: React.FC = () => {
     }
   ]
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(headerRef.current, {
+        scrollTrigger: {
+          trigger: headerRef.current,
+          start: "top 85%",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      })
+
+      if (gridRef.current) {
+        gsap.from(gridRef.current.children, {
+          scrollTrigger: {
+            trigger: gridRef.current,
+            start: "top 80%",
+          },
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power2.out"
+        })
+      }
+
+      gsap.from(footerRef.current, {
+        scrollTrigger: {
+          trigger: footerRef.current,
+          start: "top 90%",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      })
+    }, containerRef)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <div className="w-full py-20 bg-white" id="pendaftaran">
+    <div ref={containerRef} className="w-full py-20 bg-white overflow-hidden" id="pendaftaran">
       <div className="px-4 md:px-10 lg:px-40 flex justify-center">
         <div className="max-w-[1200px] w-full flex flex-col gap-12">
-          <div className="text-center max-w-3xl mx-auto">
+          <div ref={headerRef} className="text-center max-w-3xl mx-auto">
             <h2 className="text-secondary text-sm font-bold uppercase tracking-widest mb-2">
               Pendaftaran
             </h2>
@@ -40,7 +91,7 @@ const RegistrationRequirements: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {requirements.map((req, index) => (
               <div key={index} className="bg-accent-cream p-6 rounded-xl border-b-4 border-secondary hover:-translate-y-1 transition-transform shadow-sm flex flex-col items-center text-center">
                 <div className="p-4 bg-white rounded-full text-secondary mb-4 shadow-inner">
@@ -52,7 +103,7 @@ const RegistrationRequirements: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex flex-col items-center gap-6 mt-8">
+          <div ref={footerRef} className="flex flex-col items-center gap-6 mt-8">
             <p className="text-lg font-medium text-text-dark text-center">
               Sudah siap bergabung dengan kami? Silakan isi formulir pendaftaran di bawah ini:
             </p>
@@ -73,3 +124,4 @@ const RegistrationRequirements: React.FC = () => {
 }
 
 export default RegistrationRequirements
+

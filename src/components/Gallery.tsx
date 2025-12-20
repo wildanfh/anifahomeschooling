@@ -1,4 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 interface GalleryItem {
   src: string
@@ -9,6 +13,9 @@ interface GalleryItem {
 
 const Gallery: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null)
+  const galleryRef = useRef<HTMLDivElement>(null)
 
   // All gallery items from the assets folder (excluding logo.png)
   const galleryItems: GalleryItem[] = [
@@ -122,6 +129,48 @@ const Gallery: React.FC = () => {
     }
   ]
 
+  const galleryTriggerRef = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(headerRef.current, {
+        scrollTrigger: {
+          trigger: headerRef.current,
+          start: "top 90%",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      })
+
+      if (galleryRef.current) {
+        gsap.from(galleryRef.current.children, {
+          scrollTrigger: {
+            trigger: galleryTriggerRef.current,
+            start: "top 90%",
+          },
+          x: 50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power2.out",
+          clearProps: "all"
+        })
+      }
+    }, containerRef)
+
+    // Refresh ScrollTrigger after a short delay to handle layout shifts
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh()
+    }, 500)
+
+    return () => {
+      ctx.revert()
+      clearTimeout(timer)
+    }
+  }, [])
+
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -158,10 +207,10 @@ const Gallery: React.FC = () => {
   }
 
   return (
-    <div className="w-full py-20 bg-white" id="galeri">
+    <div ref={containerRef} className="w-full py-20 bg-white overflow-hidden" id="galeri">
       <div className="px-4 md:px-10 lg:px-40 flex justify-center">
         <div className="max-w-[1200px] w-full flex flex-col gap-12">
-          <div className="text-center max-w-3xl mx-auto">
+          <div ref={headerRef} className="text-center max-w-3xl mx-auto">
             <h2 className="text-primary-dark text-sm font-bold uppercase tracking-widest mb-2">
               Dokumentasi
             </h2>
@@ -174,9 +223,9 @@ const Gallery: React.FC = () => {
           </div>
 
           {/* Horizontal scrollable gallery */}
-          <div className="relative">
+          <div ref={galleryTriggerRef} className="relative">
             <div className="overflow-x-auto pb-4 -mx-4 px-4">
-              <div className="flex gap-6 w-max">
+              <div ref={galleryRef} className="flex gap-6 w-max">
                 {galleryItems.map((item, index) => (
                   <div
                     key={index}
@@ -299,3 +348,4 @@ const Gallery: React.FC = () => {
 }
 
 export default Gallery
+

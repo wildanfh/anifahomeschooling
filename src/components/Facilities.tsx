@@ -1,12 +1,51 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Facilities: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const leftColRef = useRef<HTMLDivElement>(null)
+  const rightColRef = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      if (leftColRef.current) {
+        gsap.from(leftColRef.current.children, {
+          scrollTrigger: {
+            trigger: leftColRef.current,
+            start: "top 85%",
+          },
+          x: -50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.3,
+          ease: "power2.out"
+        })
+      }
+
+      gsap.from(rightColRef.current, {
+        scrollTrigger: {
+          trigger: rightColRef.current,
+          start: "top 80%",
+        },
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out"
+      })
+    }, containerRef)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <div className="w-full py-20 bg-white" id="fasilitas">
+    <div ref={containerRef} className="w-full py-20 bg-white overflow-hidden" id="fasilitas">
       <div className="px-4 md:px-10 lg:px-40 flex justify-center">
         <div className="max-w-[1200px] w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div className="flex flex-col gap-8">
+            <div ref={leftColRef} className="flex flex-col gap-8">
               <div>
                 <h3 className="text-2xl font-bold text-text-dark mb-4 flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary-dark">settings_accessibility</span>
@@ -40,7 +79,7 @@ const Facilities: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-accent-pink/30 p-8 rounded-3xl border border-primary/10">
+            <div ref={rightColRef} className="bg-accent-pink/30 p-8 rounded-3xl border border-primary/10">
               <div className="flex flex-col gap-8">
                 <div>
                   <h3 className="text-2xl font-bold text-text-dark mb-4 flex items-center gap-2">
@@ -80,3 +119,4 @@ const Facilities: React.FC = () => {
 }
 
 export default Facilities
+

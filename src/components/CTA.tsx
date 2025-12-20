@@ -1,10 +1,35 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const CTA: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(contentRef.current?.children || [], {
+        scrollTrigger: {
+          trigger: contentRef.current,
+          start: "top 85%",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power2.out"
+      })
+    }, containerRef)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <div className="w-full py-20 bg-gradient-to-r from-[#B8DB80] to-[#a5c96d] text-white">
+    <div ref={containerRef} className="w-full py-20 bg-gradient-to-r from-[#B8DB80] to-[#a5c96d] text-white overflow-hidden">
       <div className="px-4 md:px-10 lg:px-40 flex justify-center text-center">
-        <div className="max-w-[800px] flex flex-col gap-8 items-center">
+        <div ref={contentRef} className="max-w-[800px] flex flex-col gap-8 items-center">
           <h2 className="text-3xl md:text-5xl font-bold text-[#2c3e18]">
             Mari Bersinergi untuk Masa Depan Ananda
           </h2>
@@ -31,3 +56,4 @@ const CTA: React.FC = () => {
 }
 
 export default CTA
+

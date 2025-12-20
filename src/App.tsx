@@ -1,4 +1,7 @@
+import { useEffect } from 'react'
 import { HelmetProvider, Helmet } from 'react-helmet-async'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Profile from './components/Profile'
@@ -11,7 +14,18 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 
+gsap.registerPlugin(ScrollTrigger)
+
 function App() {
+  useEffect(() => {
+    // Global refresh for ScrollTrigger after all components mount
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh()
+    }, 1000)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <HelmetProvider>
       <Helmet>
@@ -43,7 +57,7 @@ function App() {
         </script>
       </Helmet>
 
-      <div className="bg-background-light text-text-dark font-display antialiased overflow-x-hidden selection:bg-secondary selection:text-white">
+      <div className="bg-background-light text-text-dark font-display antialiased selection:bg-secondary selection:text-white">
         <Header />
         <main>
           <Hero />

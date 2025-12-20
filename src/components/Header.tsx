@@ -1,11 +1,35 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
+import { gsap } from 'gsap'
 
 const Header: React.FC = () => {
+  const logoRef = useRef<HTMLDivElement>(null)
+  const navRef = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } })
+
+      tl.from(logoRef.current, {
+        x: -20,
+        opacity: 0,
+        duration: 0.8,
+      })
+        .from(navRef.current?.children || [], {
+          y: -10,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.1,
+        }, "-=0.4")
+    })
+
+    return () => ctx.revert()
+  }, [])
+
   return (
     <div className="sticky top-0 z-50 w-full border-b border-[#ebdcb2] bg-[#F7F6D3]/95 backdrop-blur-sm">
       <div className="px-4 md:px-10 lg:px-40 flex justify-center py-4">
         <div className="max-w-[1200px] flex-1 flex items-center justify-between">
-          <div className="flex items-center gap-3 text-text-dark">
+          <div ref={logoRef} className="flex items-center gap-3 text-text-dark">
             <div className="size-12 rounded-full flex items-center justify-center overflow-hidden bg-white shadow-sm border-2 border-primary/20">
               <img
                 alt="Anifa Homeschooling Logo"
@@ -17,7 +41,7 @@ const Header: React.FC = () => {
               Anifa Homeschooling
             </h2>
           </div>
-          <div className="flex items-center gap-8">
+          <div ref={navRef} className="flex items-center gap-8">
             <nav className="hidden md:flex items-center gap-6 text-[#5d4d44]">
               <a className="text-sm font-semibold hover:text-primary-dark transition-colors" href="#profil">
                 Profil
@@ -45,3 +69,4 @@ const Header: React.FC = () => {
 }
 
 export default Header
+
