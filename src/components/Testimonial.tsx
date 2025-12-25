@@ -4,17 +4,17 @@ import { gsap } from 'gsap'
 const testimonials = [
   {
     id: 1,
-    text: "Program ini sangat membantu saya mendampingi anak belajar di rumah. Anak jadi lebih fokus dan ceria. Terima kasih!",
-    name: "Ibu Rina",
+    text: "Sangat merekomendasikan Anifa Homeschooling sebagai partner pendidikan dalam membentuk anak yang cinta Ilmu dan Islam.",
+    name: "Ibu Mira",
     location: "Jakarta",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuALrx1dzeCf0IvxfL6cIz80bAJCPvWzhzFCsvFcnarJeX3D_SBkFVZWpG5viaPtRGytwwQ1EGk7U9zc6FqMpi4_fkFGVmB0hcaNg56rskqb1Ai3wvIGWGx1dIhJ6o_833wdBEaW6toE0FrIfI6FdZ3A01pZyuPzhXZL36ZQoDmRakBiBqv_Pw4QJkgkqVy4eM3Z5Iyw1iWTvtnw9XXYaf3537NvmeOU6Z6TGmWjI7uCM3MIDP13V_ttX_g7CCwreuOk4Q-cKCewty9k"
+    image: "/assets/testi-ibu-mira.jpeg"
   },
   {
     id: 2,
-    text: "Anak saya sekarang lebih antusias belajar. Kurikulumnya sangat fleksibel dan sesuai dengan kebutuhan perkembangan anak kami.",
-    name: "Bapak Budi",
-    location: "Bandung",
-    image: "https://images.unsplash.com/photo-1581382575275-97901c2635b7?q=80&w=2070&auto=format&fit=crop"
+    text: "Alhamdulillah Anifa Homeschooling solusi terbaik bagi keluarga saya dalam pendidikan akademiknya. Kedua anak saya mendapatkan pendidikan terbaik dari guru-guru yang profesional.",
+    name: "Ibu Rasidah",
+    location: "Kalimantan Tengah",
+    image: "/assets/testi-ibu-rasidah.jpeg"
   },
   {
     id: 3,
